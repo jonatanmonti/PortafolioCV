@@ -1,0 +1,124 @@
+<!-- HERO -->
+<section id="hero" class="section hero">
+  <div class="frame img-left">
+    <img src="assets/hero.jpg" alt="Developer workspace">
+  </div>
+
+  <div class="content">
+    <!-- 👇 NUEVO: envolvemos el contenido en .surface -->
+    <div class="surface surface--hero">
+      <!--<p class="eyebrow">Programmer Presentation Template</p>-->
+      <h1 class="title">FULL-STACK DEVELOPER</h1>
+
+      <div class="cta-row">
+        <span class="pill pill-pink">Presented By: Jonatan Monti</span>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+
+      <hr>
+      <p class="muted">Texto de ejemplo…</p>
+    </div>
+  </div>
+</section>
+
+<!-- CV (antes había una imagen) -->
+<section id="cv" class="section center card">
+  <h2 class="title">Curriculum Vitae</h2>
+  <app-cv></app-cv>
+</section>
+
+<!-- INTRO (imagen derecha) -->
+<section id="intro" class="section alt">
+  <div class="content">
+    <h2 class="title">Introduction</h2>
+    <p class="lead">Descripción breve…</p>
+
+    <div class="card">
+      <p>Más detalle de la intro…</p>
+      <a class="btn">Learn More</a>
+    </div>
+  </div>
+
+  <div class="frame img-right">
+    <img src="assets/intro.jpg" alt="Team discussing code">
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history" class="section">
+  <div class="frame img-left">
+    <img src="assets/hero.jpg" alt="Code details">
+  </div>
+
+  <div class="content">
+    <h2 class="title">Our History</h2>
+    <p class="lead">Resumen…</p>
+
+    <div class="timeline">
+      <div class="tile">
+        <div class="badge">2024</div>
+        <p>Logros destacados.</p>
+      </div>
+      <div class="tile">
+        <div class="badge">2025</div>
+        <p>Objetivos actuales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="section alt">
+  <div class="frame img-right">
+    <img src="assets/mission.jpg" alt="Mission">
+    <div class="ribbon">
+      <strong>95%</strong><span>Positive<br>Feedback</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 class="title">Our Mission</h2>
+    <div class="card">
+      <p>Texto de misión…</p>
+      <a class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="contact-left">
+    <h2 class="title">Contact Me</h2>
+    <ul class="contact-list">
+      <li><span>📞</span> +123-456-7890</li>
+      <li><span>🌐</span> www.tusitio.com</li>
+      <li><span>✉️</span> hola@tusitio.com</li>
+      <li><span>📍</span> Buenos Aires, Argentina</li>
+    </ul>
+  </div>
+
+  <form class="contact-form" (submit)="$event.preventDefault()">
+    <label>
+      <span>Name</span>
+      <input type="text" placeholder="Tu nombre">
+    </label>
+    <label class="two">
+      <div>
+        <span>Email</span>
+        <input type="email" placeholder="vos@correo.com">
+      </div>
+      <div>
+        <span>Phone Number</span>
+        <input type="tel" placeholder="+54 9 ...">
+      </div>
+    </label>
+    <label>
+      <span>Message</span>
+      <textarea rows="5" placeholder="Hola..."></textarea>
+    </label>
+
+    <div class="form-actions">
+      <button class="btn" type="submit">Submit</button>
+    </div>
+  </form>
+</section>

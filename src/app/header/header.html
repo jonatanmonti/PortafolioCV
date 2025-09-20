@@ -1,0 +1,11 @@
+<header class="navbar">
+  <div class="brand">Studio Shodwe</div>
+
+  <nav class="nav">
+    <button *ngFor="let s of sections"
+            (click)="scrollTo(s.id)"
+            [class.active]="active === s.id">
+      {{ s.label }}
+    </button>
+  </nav>
+</header>

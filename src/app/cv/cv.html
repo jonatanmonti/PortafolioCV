@@ -1,0 +1,98 @@
+<section class="cv">
+
+  <!-- Encabezado de dos columnas: izquierda texto, derecha foto -->
+  <header class="hero">
+    <div class="hero-left">
+      <h2 class="name">{{ name }}</h2>
+      <p class="role">{{ title }}</p>
+
+      <p class="about">{{ about }}</p>
+
+      <ul class="contact">
+        <li *ngFor="let c of contact">
+          <a [href]="c.href" target="_blank" rel="noopener">
+            <span class="icon">{{ c.icon }}</span>{{ c.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-card">
+        <img [src]="photoUrl" alt="Foto de {{name}}">
+      </div>
+    </div>
+  </header>
+
+  <!-- Cuerpo: izquierda Work Experience / derecha Education + Skills + Soft Skills -->
+  <div class="grid">
+
+    <!-- Columna izquierda -->
+    <section class="left">
+      <h3 class="section-title">Work Experience</h3>
+
+      <article class="xp" *ngFor="let x of experience">
+        <div class="xp-head">
+          <div class="role-org">
+            <h4 class="role">{{ x.role }}</h4>
+            <div class="org">{{ x.org }}</div>
+          </div>
+          <div class="period">{{ x.period }}</div>
+        </div>
+        <ul class="bullets">
+          <li *ngFor="let b of x.bullets">{{ b.text }}</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Columna derecha -->
+    <aside class="right">
+      <section class="card">
+        <h3 class="section-title">Education</h3>
+        <ul class="edu-list">
+          <li *ngFor="let e of education">
+            <div class="edu-title">{{ e.title }}</div>
+            <div class="edu-org">{{ e.org }}</div>
+            <div class="edu-period" *ngIf="e.period">{{ e.period }}</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3 class="section-title">Skills</h3>
+
+        <h4 class="skill-group">Frontend</h4>
+        <ul class="skill-list">
+          <li *ngFor="let s of skillsFrontend">
+            <div class="row"><span>{{ s.name }}</span><span class="pct">{{ s.level }}%</span></div>
+            <div class="bar"><span class="fill" [style.width.%]="s.level"></span></div>
+          </li>
+        </ul>
+
+        <h4 class="skill-group">Backend</h4>
+        <ul class="skill-list">
+          <li *ngFor="let s of skillsBackend">
+            <div class="row"><span>{{ s.name }}</span><span class="pct">{{ s.level }}%</span></div>
+            <div class="bar"><span class="fill" [style.width.%]="s.level"></span></div>
+          </li>
+        </ul>
+
+        <h4 class="skill-group">DevOps / Others</h4>
+        <ul class="skill-list">
+          <li *ngFor="let s of skillsDevops">
+            <div class="row"><span>{{ s.name }}</span><span class="pct">{{ s.level }}%</span></div>
+            <div class="bar"><span class="fill" [style.width.%]="s.level"></span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3 class="section-title">Soft Skills</h3>
+        <ul class="chips">
+          <li *ngFor="let s of softSkills">{{ s }}</li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</section>
