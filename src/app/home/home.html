@@ -8,11 +8,11 @@
     <!-- 👇 NUEVO: envolvemos el contenido en .surface -->
     <div class="surface surface--hero">
       <!--<p class="eyebrow">Programmer Presentation Template</p>-->
-      <h1 class="title">FULL-STACK DEVELOPER</h1>
+      <h1 class="title">{{'HOME.HERO_SUB' | translate }}</h1>
 
       <div class="cta-row">
-        <span class="pill pill-pink">Presented By: Jonatan Monti</span>
-        <a class="btn" href="#contact">Contact</a>
+        <span class="pill pill-pink">{{'HOME.PRESENTED' | translate }}</span>
+        <a class="btn" href="#contact">{{'HOME.CTA_CONTACT' | translate }}</a>
       </div>
 
       <hr>
@@ -30,12 +30,12 @@
 <!-- INTRO (imagen derecha) -->
 <section id="intro" class="section alt">
   <div class="content">
-    <h2 class="title">Introduction</h2>
+    <h2 class="title">{{'HOME.INTRODUCTION' | translate }}</h2>
     <p class="lead">Descripción breve…</p>
 
     <div class="card">
       <p>Más detalle de la intro…</p>
-      <a class="btn">Learn More</a>
+      <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a>
     </div>
   </div>
 
@@ -51,7 +51,7 @@
   </div>
 
   <div class="content">
-    <h2 class="title">My Professional History</h2>
+    <h2 class="title">{{'HOME.PROFESSIONAL_HISTORY' | translate }}</h2>
     <p class="lead">Resumen…</p>
 
     <div class="timeline">
@@ -77,10 +77,10 @@
   </div>
 
   <div class="content">
-    <h2 class="title">Objetives</h2>
+    <h2 class="title">{{'HOME.OBJECTIVES' | translate }}</h2>
     <div class="card">
       <p>Texto de misión…</p>
-      <a class="btn">Learn More</a>
+      <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a>
     </div>
   </div>
 </section>
@@ -88,31 +88,31 @@
 <!-- CONTACT -->
 <section id="contact" class="section contact">
   <div class="contact-left">
-    <h2 class="title">Contact Me</h2>
+    <h2 class="title">{{'CONTACT_ME.CONTACT_ME' | translate }}</h2>
     <ul class="contact-list">
       <li><span>🌐</span> www.tusitio.com</li>
       <li><span>✉️</span> hola@tusitio.com</li>
-      <li><span>📍</span> Buenos Aires, Argentina</li>
+      <li><span>📍</span> CABA, Argentina</li>
     </ul>
   </div>
 
   <form class="contact-form" (submit)="$event.preventDefault()">
     <label>
-      <span>Name</span>
+      <span>{{'CONTACT_ME.NAME' | translate }}</span>
       <input type="text" placeholder="Tu nombre">
     </label>
     <label class="two">
       <div>
-        <span>Email</span>
+        <span>{{'CONTACT_ME.EMAIL' | translate }}</span>
         <input type="email" placeholder="vos@correo.com">
       </div>
       <div>
-        <span>Phone Number</span>
+        <span>{{'CONTACT_ME.PHONE_NUMBER' | translate }}</span>
         <input type="tel" placeholder="+54 9 ...">
       </div>
     </label>
     <label>
-      <span>Message</span>
+      <span>{{'CONTACT_ME.MESSAGE' | translate }}</span>
       <textarea rows="5" placeholder="Hola..."></textarea>
     </label>
 

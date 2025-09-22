@@ -6,7 +6,7 @@
       <h2 class="name">{{ name }}</h2>
       <p class="role">{{ title }}</p>
 
-      <p class="about">{{ about }}</p>
+      <p class="about">{{ 'CV.ABOUT' | translate }}</p>
 
       <ul class="contact">
         <li *ngFor="let c of contact">
@@ -34,13 +34,13 @@
       <article class="xp" *ngFor="let x of experience">
         <div class="xp-head">
           <div class="role-org">
-            <h4 class="role">{{ x.role }}</h4>
-            <div class="org">{{ x.org }}</div>
+            <h4 class="role">{{ x.role | translate}}</h4>
+            <div class="org">{{ x.org | translate}}</div>
           </div>
           <div class="period">{{ x.period }}</div>
         </div>
         <ul class="bullets">
-          <li *ngFor="let b of x.bullets">{{ b.text }}</li>
+          <li *ngFor="let bkey of x.bullets">{{ bkey | translate }}</li>
         </ul>
       </article>
     </section>
@@ -48,11 +48,11 @@
     <!-- Columna derecha -->
     <aside class="right">
       <section class="card">
-        <h3 class="section-title">Education</h3>
+        <h3 class="section-title">{{"CV.EDUCATION" | translate}}</h3>
         <ul class="edu-list">
           <li *ngFor="let e of education">
-            <div class="edu-title">{{ e.title }}</div>
-            <div class="edu-org">{{ e.org }}</div>
+            <div class="edu-title">{{ e.title | translate}}</div>
+            <div class="edu-org">{{ e.org |translate }}</div>
             <div class="edu-period" *ngIf="e.period">{{ e.period }}</div>
           </li>
         </ul>
@@ -87,9 +87,9 @@
       </section>
 
       <section class="card">
-        <h3 class="section-title">Soft Skills</h3>
+        <h3 class="section-title">{{'CV.SOFT_SKILLS' | translate}}</h3>
         <ul class="chips">
-          <li *ngFor="let s of softSkills">{{ s }}</li>
+          <li *ngFor="let s of softSkills">{{ s | translate}}</li>
         </ul>
       </section>
     </aside>

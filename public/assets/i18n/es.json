@@ -1,0 +1,81 @@
+{
+  "HOME": {
+    "HERO_SUB": "Desarrollador Full-Stack",
+    "PRESENTED": "Presentado por: Jonatan Monti",
+    "CTA_CONTACT": "Contacto",
+    "INTRODUCTION": "Introducción",
+    "PROFESSIONAL_HISTORY": "Mi carrera profesional",
+    "OBJECTIVES": "Objetivos",
+    "LEARN_MORE": "Leer más"
+  },
+  "CONTACT_ME": {
+    "CONTACT_ME": "Contáctame",
+    "NAME": "Nombre",
+    "EMAIL": "Correo electrónico",
+    "PHONE_NUMBER": "Celular",
+    "MESSAGE": "Mensaje"
+  },
+  "HEADER": {
+    "HOME":"Inicio",
+    "ABOUT_ME":"Introducción",
+    "HISTORY":"Mi carrera profesional",
+    "CV":"CV",
+    "MISSION":"Objetivos",
+    "CONTACT_ME": "Contáctame"
+  },
+  "CV": {
+    "ABOUT":"Desarrollador full-stack con experiencia en desarrollo web y de software. Proactivo, organizado y responsable, capaz de resolver problemas de forma creativa, tanto individualmente como en equipo.",
+    "EDUCATION":"Educación",
+    "SOFT_SKILLS": "Habilidades blandas",
+
+    "EXP1": {
+    "ROLE": "Desarrollador de Software",
+    "ORG":  "Ministerio de Economía",
+    "B1":   "Desktop (C#, SQL, Windows Forms).",
+    "B2":   "ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.",
+    "B3":   "Angular, TypeScript, Bootstrap, Azure DevOps."
+    },
+    "EXP2": {
+      "ROLE": "Desarrollador Full-Stack",
+      "ORG":  "Comisión Nacional de Valores",
+      "B1":   "ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.",
+      "B2":   "Angular/Ionic, TypeScript, Vue.js, Bootstrap.",
+      "B3":   "Trabajo en equipo, buenas prácticas, testing."
+    },
+
+    "EDU1": { "TITLE": "Ingeniería en Sistemas Informáticos", "ORG": "Universidad Abierta Interamericana" },
+    "EDU2": { "TITLE": "Desarrollo Web", "ORG": "CoderHouse" },
+    "EDU3": { "TITLE": "Fundamentos de desarrollo de software", "ORG": "Microsoft (Microsoft Learn/LinkedIn)" },
+
+    "SKILL": {
+      "ANGULAR": "Angular",
+      "IONIC": "Ionic",
+      "TS": "TypeScript",
+      "HTMLCSS": "HTML / CSS / SCSS",
+      "VUE": "Vue.js",
+      "CSHARP": "C# / .NET",
+      "REST": "Web APIs / REST",
+      "EF": "Entity Framework",
+      "SQL": "SQL",
+      "GIT": "Git",
+      "AZDO": "Azure DevOps",
+      "LINUX": "Linux / CLI"
+    },
+
+    "SOFT": {
+      "TEAMWORK": "Trabajo en equipo",
+      "ADAPTABILITY": "Adaptabilidad",
+      "ANALYTIC": "Razonamiento analítico",
+      "COLLAB": "Colaboración",
+      "CREATIVITY": "Creatividad",
+      "TIME": "Gestión del tiempo",
+      "PUBLIC": "Hablar en público",
+      "PRESSURE": "Resolución bajo presión"
+    }
+
+  },
+  
+  "FOOTER": {
+
+  }
+}

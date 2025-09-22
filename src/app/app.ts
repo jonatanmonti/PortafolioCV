@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Home } from './home/home';
 import { Footer } from './footer/footer';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,11 @@ import { Footer } from './footer/footer';
 })
 export class App {
   protected readonly title = signal('PortafolioCV');
+  private t = inject(TranslateService);
+
+  constructor() {
+    const saved = localStorage.getItem('lang') || 'es';
+    this.t.setDefaultLang('es');
+    this.t.use(saved);
+  }
 }

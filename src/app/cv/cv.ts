@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
-type Bullet = { text: string };
-type Experience = { role: string; org: string; period: string; bullets: Bullet[] };
+type Experience = { role: string; org: string; period: string; bullets: string[] };
 type Education = { title: string; org: string; period: string };
 type Skill = { name: string; level: number };
 
 @Component({
   selector: 'app-cv',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './cv.html',
   styleUrl: './cv.scss'
 })
@@ -24,37 +24,35 @@ export class Cv {
     { icon: '🔗', label: 'linkedin.com/in/jonatanmonti', href: 'https://www.linkedin.com/in/jonatanmonti/' }
   ];
 
-  about = `Desarrollador full-stack con experiencia en desarrollo web y de software.
-Proactivo, organizado y responsable, capaz de resolver problemas de forma creativa,
-tanto individualmente como en equipo.`;
+  about = `CV.ABOUT`;
 
   experience: Experience[] = [
     {
-      role: 'Desarrollador Full-Stack',
-      org: 'Ministerio de Economía',
+      role: 'CV.EXP1.ROLE',
+      org: 'CV.EXP1.ORG',
       period: '2023 – 2025',
       bullets: [
-        { text: 'Desktop Software (C#, SQL, Windows Forms).' },
-        { text: 'ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.' },
-        { text: 'Angular, TypeScript, Bootstrap, Azure DevOps.' }
+        'CV.EXP1.B1',
+        'CV.EXP1.B2',
+        'CV.EXP1.B3'
       ]
     },
     {
-      role: 'Desarrollador Full-Stack',
-      org: 'Comisión Nacional de Valores',
+      role: 'CV.EXP2.ROLE',
+      org: 'CV.EXP2.ORG',
       period: '2025 – Actualidad',
       bullets: [
-        { text: 'ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.' },
-        { text: 'Angular/Ionic, TypeScript, Vue.js, Bootstrap.' },
-        { text: 'Trabajo en equipo, buenas prácticas, testing.' }
+       'CV.EXP2.B1',
+       'CV.EXP2.B2',
+       'CV.EXP2.B3'
       ]
     }
   ];
 
   education: Education[] = [
-    { title: 'Ingeniería en Sistemas Informáticos', org: 'Universidad Abierta Interamericana', period: '2019 – Actualidad' },
-    { title: 'Desarrollo Web', org: 'CoderHouse', period: '' },
-    { title: 'Fundamentos de desarrollo de software', org: 'Microsoft (Microsoft Learn/LinkedIn)', period: '' }
+    { title: 'CV.EDU1.TITLE', org: 'CV.EDU1.ORG', period: '2019 – Actualidad' },
+    { title: 'CV.EDU2.TITLE', org: 'CV.EDU2.ORG', period: '' },
+    { title: 'CV.EDU3.TITLE', org: 'CV.EDU3.ORG', period: '' }
   ];
 
   // skills de muestra (puedes editar niveles)
@@ -78,7 +76,8 @@ tanto individualmente como en equipo.`;
   ];
 
   softSkills = [
-    'Trabajo en equipo', 'Adaptabilidad', 'Razonamiento analítico', 'Colaboración',
-    'Creatividad', 'Gestión del tiempo', 'Hablar en público', 'Resolución bajo presión'
+    'CV.SOFT.TEAMWORK', 'CV.SOFT.ADAPTABILITY', 'CV.SOFT.ANALYTIC',
+    'CV.SOFT.COLLAB', 'CV.SOFT.CREATIVITY', 'CV.SOFT.TIME',
+    'CV.SOFT.PUBLIC', 'CV.SOFT.PRESSURE'
   ];
 }

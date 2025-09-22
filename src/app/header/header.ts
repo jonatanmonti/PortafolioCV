@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 type SectionId = 'hero'|'intro'|'history'|'mission'|'cv'|'contact';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
@@ -14,12 +15,12 @@ export class Header implements OnInit, OnDestroy{
   private observer?: IntersectionObserver;
 
   sections: { id: SectionId; label: string }[] = [
-    { id: 'hero',    label: 'Home' },
-    { id: 'intro',   label: 'About me' },
-    { id: 'history', label: 'Our History' },
-    { id: 'mission', label: 'Our Mission' },
-    { id: 'cv',      label: 'CV' },
-    { id: 'contact', label: 'Contact me' },
+    { id: 'hero',    label: 'HEADER.HOME' },
+    { id: 'intro',   label: 'HEADER.ABOUT_ME' },
+    { id: 'history', label: 'HEADER.HISTORY' },
+    { id: 'mission', label: 'HEADER.MISSION' },
+    { id: 'cv',      label: 'HEADER.CV' },
+    { id: 'contact', label: 'HEADER.CONTACT_ME' },
   ];
 
   ngOnInit(): void {
