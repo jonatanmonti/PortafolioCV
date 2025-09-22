@@ -15,7 +15,7 @@ type Skill = { name: string; level: number };
 export class Cv {
   name = 'JONATAN MONTI';
   title = 'FULL-STACK DEVELOPER';
-  photoUrl = 'assets/profile.jpg'; // <-- poné tu imagen aquí (300x350 aprox)
+  photoUrl = 'assets/fotoCV.jpeg';
 
   // Contacto (SIN teléfono)
   contact = [
@@ -59,21 +59,22 @@ tanto individualmente como en equipo.`;
 
   // skills de muestra (puedes editar niveles)
   skillsFrontend: Skill[] = [
-    { name: 'Angular / Ionic', level: 85 },
-    { name: 'TypeScript', level: 85 },
+    { name: 'Angular', level: 70 },
+    { name: 'Ionic', level: 30 },
+    { name: 'TypeScript', level: 70 },
     { name: 'HTML / CSS / SCSS', level: 90 },
     { name: 'Vue.js', level: 60 }
   ];
   skillsBackend: Skill[] = [
-    { name: 'C# / .NET', level: 90 },
-    { name: 'Web APIs / REST', level: 83 },
-    { name: 'Entity Framework', level: 80 },
-    { name: 'SQL Server', level: 80 }
+    { name: 'C# / .NET', level: 70 },
+    { name: 'Web APIs / REST', level: 70 },
+    { name: 'Entity Framework', level: 70 },
+    { name: 'SQL', level: 70 }
   ];
   skillsDevops: Skill[] = [
     { name: 'Git', level: 85 },
     { name: 'Azure DevOps', level: 70 },
-    { name: 'Linux / CLI', level: 60 }
+    { name: 'Linux / CLI', level: 50 }
   ];
 
   softSkills = [

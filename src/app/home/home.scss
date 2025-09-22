@@ -1,13 +1,35 @@
 .section {
+  position: relative; /* para el separador */
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 3rem;
   align-items: center;
   padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
-  max-width: 1200px; margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &.alt { grid-template-columns: 1fr 1.1fr; }
   &.center { grid-template-columns: 1fr; text-align: center; }
+}
+
+/* separación visual entre secciones */
+.section + .section { margin-top: clamp(3rem, 8vw, 6rem); }
+.section + .section::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * clamp(2rem, 5vw, 3rem));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 92%);
+  height: 56px;
+  pointer-events: none;
+  border-radius: 999px;
+  background: radial-gradient(60% 100% at 50% 0%,
+              rgba(164, 69, 255, .18) 0%,
+              rgba(164, 69, 255, .08) 40%,
+              rgba(0,0,0,0) 70%);
+  filter: blur(8px);
+  opacity: .65;
 }
 
 .title { font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.1; margin: .2rem 0 1rem; }
@@ -20,6 +42,7 @@
   border-radius: 20px; padding: .8rem;
   background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
   box-shadow: 0 10px 40px rgba(120, 75, 160, .25);
+
   img {
     width: 100%; display: block; border-radius: 14px;
     object-fit: cover; aspect-ratio: 4/3;
@@ -49,8 +72,8 @@
 
 hr { border: 0; height: 1px; background: rgba(255,255,255,.15); margin: 1rem 0; }
 
+/* tarjetas con el look del CV */
 .card {
-  /* sincronizamos con el look del CV */
   background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 20px;
@@ -59,6 +82,7 @@ hr { border: 0; height: 1px; background: rgba(255,255,255,.15); margin: 1rem 0; 
   p { color: #d8d8e5; margin-bottom: .8rem; }
 }
 
+/* history tiles */
 .timeline {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;
   .tile {
@@ -91,25 +115,64 @@ hr { border: 0; height: 1px; background: rgba(255,255,255,.15); margin: 1rem 0; 
   img { width: min(900px, 100%); display: block; }
 }
 
+/* ===================== CONTACT ===================== */
 .contact {
   grid-template-columns: 1fr 1.2fr; align-items: start;
+
   .contact-left { padding-right: 1rem; }
-  .contact-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .5rem;
+  .contact-list {
+    list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .5rem;
     li { display: flex; align-items: center; gap: .6rem; color: #ddd; }
   }
+
   .contact-form {
     background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
     border: 1px solid rgba(255,255,255,.07);
-    border-radius: 20px; padding: 1rem; display: grid; gap: .8rem;
+    border-radius: 20px;
+    padding: 1rem;
+    display: grid;
+    gap: .9rem;
 
-    label { display: grid; gap: .4rem; font-size: .9rem; color: #cfd0ff; }
-    input, textarea {
-      width: 100%; border-radius: 12px; padding: .8rem 1rem;
-      background: rgba(255,255,255,.05); color: #fff; border: 1px solid rgba(255,255,255,.09);
-      outline: none;
+    /* 👇 CLAVE: que todo use border-box para que padding + borde no sumen ancho */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* 👇 CLAVE: recortar lo que sobresalga (respeta el radio) */
+    overflow: hidden;
+
+    label { display: grid; gap: .45rem; font-size: .9rem; color: #cfd0ff; }
+
+    /* Fila de 2 columnas (Email / Phone) */
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+
+      /* 👇 CLAVE: en Grid, min-width:auto puede provocar overflow */
+      > div { min-width: 0; }
     }
-    .two { grid-template-columns: 1fr 1fr; display: grid; gap: .8rem; }
-    .form-actions { text-align: right; }
+
+    input, textarea {
+      width: 100%;
+      border-radius: 12px;
+      padding: .8rem 1rem;
+      color: #fff;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+      outline: none;
+
+      /* por si algún navegador aplica estilos propios que suman ancho */
+      box-sizing: border-box;
+    }
+
+    input::placeholder, textarea::placeholder { color: #9ea0b4; }
+
+    input:focus, textarea:focus {
+      border-color: rgba(164, 69, 255, .55);
+      box-shadow: 0 0 0 3px rgba(164, 69, 255, .15) inset;
+      background: rgba(255,255,255,.06);
+    }
+
+    .form-actions { text-align: right; margin-top: .2rem; }
   }
 }
 
@@ -121,13 +184,14 @@ hr { border: 0; height: 1px; background: rgba(255,255,255,.15); margin: 1rem 0; 
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
   padding: 1.2rem 1.4rem;
 }
-
 .surface--hero { padding: 1.4rem 1.6rem; }
 .section .content .surface { margin-top: .5rem; }
 
+/* responsive */
 @media (max-width: 1000px) {
   .section, .section.alt { grid-template-columns: 1fr; }
   .frame, .content, .alt .content { order: initial; }
   .timeline { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
+  .contact .contact-form .two { grid-template-columns: 1fr; } /* email/phone apilan */
 }
