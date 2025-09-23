@@ -1,0 +1,82 @@
+{
+  "HOME": {
+    "HERO_SUB": "Full-Stack Developer",
+    "PRESENTED": "Presented by: Jonatan Monti",
+    "CTA_CONTACT": "Contact",
+    "INTRODUCTION": "Introduction",
+    "PROFESSIONAL_HISTORY": "My Professional Career",
+    "OBJECTIVES": "Objectives",
+    "LEARN_MORE": "Learn more",
+    "FEEDBACK": "Feedback",
+    "POSITIVE_FEEDBACK": "Positive"
+  },
+  "CONTACT_ME": {
+    "CONTACT_ME": "Contact me",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PHONE_NUMBER": "Phone number",
+    "MESSAGE": "Message",
+    "SUBMIT_BUTTON": "Submit"
+  },
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT_ME": "Introduction",
+    "HISTORY": "My Professional Career",
+    "CV": "CV",
+    "MISSION": "Objectives",
+    "CONTACT_ME": "Contact me"
+  },
+  "CV": {
+    "ABOUT": "Full-stack developer with experience in web and software development. Proactive, organized and responsible, able to solve problems creatively, both individually and in a team.",
+    "EDUCATION": "Education",
+    "SOFT_SKILLS": "Soft skills",
+
+    "EXP1": {
+      "ROLE": "Software Developer",
+      "ORG": "Ministry of Economy",
+      "B1": "Desktop (C#, SQL, Windows Forms).",
+      "B2": "ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.",
+      "B3": "Angular, TypeScript, Bootstrap, Azure DevOps."
+    },
+    "EXP2": {
+      "ROLE": "Full-Stack Developer",
+      "ORG": "National Securities Commission",
+      "B1": "ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.",
+      "B2": "Angular/Ionic, TypeScript, Vue.js, Bootstrap.",
+      "B3": "Teamwork, best practices, testing."
+    },
+
+    "EDU1": { "TITLE": "Computer Systems Engineering", "ORG": "Interamerican Open University" },
+    "EDU2": { "TITLE": "Web Development", "ORG": "CoderHouse" },
+    "EDU3": { "TITLE": "Software Development Fundamentals", "ORG": "Microsoft (Microsoft Learn/LinkedIn)" },
+
+    "SKILL": {
+      "ANGULAR": "Angular",
+      "IONIC": "Ionic",
+      "TS": "TypeScript",
+      "HTMLCSS": "HTML / CSS / SCSS",
+      "VUE": "Vue.js",
+      "CSHARP": "C# / .NET",
+      "REST": "Web APIs / REST",
+      "EF": "Entity Framework",
+      "SQL": "SQL",
+      "GIT": "Git",
+      "AZDO": "Azure DevOps",
+      "LINUX": "Linux / CLI"
+    },
+
+    "SOFT": {
+      "TEAMWORK": "Teamwork",
+      "ADAPTABILITY": "Adaptability",
+      "ANALYTIC": "Analytical thinking",
+      "COLLAB": "Collaboration",
+      "CREATIVITY": "Creativity",
+      "TIME": "Time management",
+      "PUBLIC": "Public speaking",
+      "PRESSURE": "Working under pressure"
+    }
+  },
+  "FOOTER": {
+
+  }
+}
