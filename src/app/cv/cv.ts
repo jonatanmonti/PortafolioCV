@@ -19,7 +19,7 @@ export class Cv {
 
   // Contacto (SIN teléfono)
   contact = [
-    { icon: '✉️', label: 'jonatan.monti@hotmail.com', href: 'mailto:jonatan.monti@hotmail.com' },
+    { icon: '✉️', label: 'jonatan.monti.job@gmail.com', href: 'mailto:jonatan.monti@hotmail.com' },
     { icon: '📍', label: 'Argentina, CABA', href: '#' },
     { icon: '🔗', label: 'linkedin.com/in/jonatanmonti', href: 'https://www.linkedin.com/in/jonatanmonti/' }
   ];

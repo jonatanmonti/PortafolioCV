@@ -42,10 +42,12 @@
   "CV": {
     "ABOUT":"Desarrollador full-stack con experiencia en desarrollo web y de software. Proactivo, organizado y responsable, capaz de resolver problemas de forma creativa, tanto individualmente como en equipo.",
     "EDUCATION":"Educación",
+    "SKILLS":"Habilidades",
+    "WORK_EXPERIENCE":"Experiencia Laboral",
     "SOFT_SKILLS": "Habilidades blandas",
 
     "EXP1": {
-    "ROLE": "Desarrollador de Software",
+    "ROLE": "Desarrollador Full-Stack",
     "ORG":  "Ministerio de Economía",
     "B1":   "Desktop (C#, SQL, Windows Forms).",
     "B2":   "ASP.NET Core 8, Web APIs, JSON, MVC, EF Core.",
