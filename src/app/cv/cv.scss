@@ -73,14 +73,13 @@
 
 /* Columna derecha del hero: tarjeta de foto */
 .photo-card {
-  width: 280px;
-  height: 340px;                 /* coordina con min-height de .hero-left */
+  width: 340px;
+  height: 300px;                 /* coordina con min-height de .hero-left */
   border-radius: 18px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
-  padding: 8px;
-  box-shadow: 0 18px 40px rgba(120,75,160,.28);
-  margin-left: auto;             /* alinea a la derecha */
+  box-shadow: 0 10px 40px rgb(135 0 255 / 25%);
+  margin-left: 80px;             /* alinea a la derecha */
 
   img {
     width: 100%;

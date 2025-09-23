@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 type SectionId = 'hero'|'intro'|'history'|'mission'|'cv'|'contact';
 
@@ -13,6 +13,19 @@ type SectionId = 'hero'|'intro'|'history'|'mission'|'cv'|'contact';
 export class Header implements OnInit, OnDestroy{
   active: SectionId = 'hero';
   private observer?: IntersectionObserver;
+  private translate = inject(TranslateService);
+  current = 'es';
+
+  constructor() {
+    this.current = localStorage.getItem('lang') || 'es';
+    this.translate.use(this.current);
+  }
+  
+  use(lang: 'es' | 'en') {
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang);
+    this.current = lang;
+  }
 
   sections: { id: SectionId; label: string }[] = [
     { id: 'hero',    label: 'HEADER.HOME' },

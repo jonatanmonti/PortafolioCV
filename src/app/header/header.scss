@@ -23,3 +23,47 @@
     }
   }
 }
+
+.lang-switch {
+  margin-left: auto;
+  display: flex;
+  gap: 12px; /* separación entre banderas */
+}
+
+/* Botón redondo con efecto glass */
+.flag-btn {
+  inline-size: 44px;  /* tamaño (aumentá a 48/52 si las querés más grandes) */
+  block-size: 44px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  /* animaciones */
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease;
+
+  /* el ícono de la bandera */
+  .fi { font-size: 22px; line-height: 1; } /* subí a 24–26 si aumentás el botón */
+
+  &:hover {
+    transform: translateY(-1px) scale(1.05);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 18px rgba(80, 0, 255, 0.15);
+  }
+
+  &.active {
+    /* resaltado activo a juego con tu gradiente */
+    background: linear-gradient(135deg, #7b2cf5, #3483fa);
+    border-color: transparent;
+    box-shadow: 0 8px 22px rgba(52, 131, 250, 0.25);
+  }
+
+  /* accesibilidad: foco teclado */
+  &:focus-visible {
+    outline: 2px solid #3483fa;
+    outline-offset: 2px;
+  }
+}

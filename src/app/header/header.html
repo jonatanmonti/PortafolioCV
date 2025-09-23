@@ -8,4 +8,25 @@
       {{ s.label | translate }}
     </button>
   </nav>
+
+  <!-- 👇 Botones de idioma a la derecha -->
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button"
+            class="flag-btn"
+            (click)="use('es')"
+            [class.active]="current==='es'"
+            [attr.aria-pressed]="current==='es'"
+            aria-label="Español">
+      <span class="fi fi-es"></span>
+    </button>
+
+    <button type="button"
+            class="flag-btn"
+            (click)="use('en')"
+            [class.active]="current==='en'"
+            [attr.aria-pressed]="current==='en'"
+            aria-label="English">
+      <span class="fi fi-gb"></span>
+    </button>
+  </div>
 </header>

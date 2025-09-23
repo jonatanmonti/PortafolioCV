@@ -7,8 +7,21 @@
     "PROFESSIONAL_HISTORY": "Mi carrera profesional",
     "OBJECTIVES": "Objetivos",
     "LEARN_MORE": "Leer más",
+    "SHOW_LESS": "Mostrar menos",
     "FEEDBACK":"Comentarios",
-    "POSITIVE_FEEDBACK":"Positivos"
+    "POSITIVE_FEEDBACK":"Positivos",
+    
+    "INTRO_LEAD": "Soy Jonatan, me especializo en soluciones web con Angular, Vue.js y .NET.",
+    "INTRO_CARD": "Me apasiona construir interfaces rápidas y limpias, APIs bien diseñadas y productos que la gente realmente usa.",
+
+    "HISTORY_LEAD": "Proyectos y experiencias más relevantes en los últimos años.",
+    "HISTORY_2023_2024": "Automatización de índices de precios",
+    "HISTORY_2023_2024_TXT": "Entre 2023 y 2024 participé en la automatización de la extracción y almacenamiento de índices de precios para obras. La información estaba distribuida en cuadros heterogéneos y sin estructura definida, por lo que diseñé lógicas específicas para cada caso. Además, normalicé campos con saltos de línea y textos mal formateados, mejorando la calidad y consistencia de los datos. Para estas tareas utilicé Angular junto con .NET, HTML, CSS, JavaScript y TypeScript.",
+    "HISTORY_2025": "CNV – Web institucional y Autopista Financiera",
+    "HISTORY_2025_TXT": "En 2025 formo parte de la mejora de la página web institucional de la CNV y de la Autopista Financiera. En este último proyecto aplico tecnologías como Vue.js, .NET, HTML, CSS, JavaScript y TypeScript, colaborando en el desarrollo de soluciones modernas y escalables.",
+
+
+    "OBJECTIVES_LEAD": "Mi meta es crear software mantenible que aporte valor real al negocio. Además, busco crecer tanto profesional como académicamente, y me motiva la idea de participar en proyectos nuevos desde cero y crear cosas innovadoras."
   },
   "CONTACT_ME": {
     "CONTACT_ME": "Contáctame",

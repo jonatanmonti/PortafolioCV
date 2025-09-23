@@ -14,9 +14,6 @@
         <span class="pill pill-pink">{{'HOME.PRESENTED' | translate }}</span>
         <a class="btn" href="#contact">{{'HOME.CTA_CONTACT' | translate }}</a>
       </div>
-
-      <hr>
-      <p class="muted">Texto de ejemplo…</p>
     </div>
   </div>
 </section>
@@ -31,11 +28,11 @@
 <section id="intro" class="section alt">
   <div class="content">
     <h2 class="title">{{'HOME.INTRODUCTION' | translate }}</h2>
-    <p class="lead">Descripción breve…</p>
+    <p class="lead">{{ 'HOME.INTRO_LEAD' | translate }}</p>
 
     <div class="card">
-      <p>Más detalle de la intro…</p>
-      <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a>
+      <p>{{ 'HOME.INTRO_CARD' | translate }}</p>   
+      <!-- <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a> -->
     </div>
   </div>
 
@@ -47,7 +44,7 @@
 <!-- HISTORY -->
 <section id="history" class="section">
   <div class="frame img-left">
-    <img src="assets/contributions.png" alt="Code details">
+    <img style="aspect-ratio: 3/3;" src="assets/carreraProfesional.png" alt="Code details">
   </div>
 
   <div class="content">
@@ -55,15 +52,35 @@
     <p class="lead">Resumen…</p>
 
     <div class="timeline">
-      <div class="tile">
-        <div class="badge">2024</div>
-        <p>Logros destacados.</p>
-      </div>
-      <div class="tile">
-        <div class="badge">2025</div>
-        <p>Objetivos actuales.</p>
-      </div>
+  <!-- 2023–2024 -->
+  <div class="tile" [class.expanded]="isExpanded('exp2023_2024')">
+    <div class="badge">2023–2024</div>
+    <h4>{{ 'HOME.HISTORY_2023_2024' | translate }}</h4>
+    <p class="xp-text" [class.clamped]="!isExpanded('exp2023_2024')">
+      {{ 'HOME.HISTORY_2023_2024_TXT' | translate }}
+    </p>
+    <div class="actions">
+      <button class="btn" (click)="toggle('exp2023_2024')">
+        {{ (isExpanded('exp2023_2024') ? 'HOME.SHOW_LESS' : 'HOME.LEARN_MORE') | translate }}
+      </button>
     </div>
+  </div>
+
+  <!-- 2025 -->
+  <div class="tile" [class.expanded]="isExpanded('exp2025')">
+    <div class="badge">2025</div>
+    <h4>{{ 'HOME.HISTORY_2025' | translate }}</h4>
+    <p class="xp-text" [class.clamped]="!isExpanded('exp2025')">
+      {{ 'HOME.HISTORY_2025_TXT' | translate }}
+    </p>
+    <div class="actions">
+      <button class="btn" (click)="toggle('exp2025')">
+        {{ (isExpanded('exp2025') ? 'HOME.SHOW_LESS' : 'HOME.LEARN_MORE') | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
@@ -79,8 +96,8 @@
   <div class="content">
     <h2 class="title">{{'HOME.OBJECTIVES' | translate }}</h2>
     <div class="card">
-      <p>Texto de misión…</p>
-      <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a>
+      <p>{{ 'HOME.OBJECTIVES_LEAD' | translate }}</p>
+      <!-- <a class="btn">{{'HOME.LEARN_MORE' | translate }}</a> -->
     </div>
   </div>
 </section>

@@ -7,8 +7,18 @@
     "PROFESSIONAL_HISTORY": "My Professional Career",
     "OBJECTIVES": "Objectives",
     "LEARN_MORE": "Learn more",
+    "SHOW_LESS": "Show less",
     "FEEDBACK": "Feedback",
-    "POSITIVE_FEEDBACK": "Positive"
+    "POSITIVE_FEEDBACK": "Positive",
+
+    "HISTORY_LEAD": "Most relevant projects and experiences in recent years.",
+    "HISTORY_2023_2024": "Price Index Automation",
+    "HISTORY_2023_2024_TXT": "Between 2023 and 2024, I contributed to the automation of extracting and storing construction price indices. The data was distributed across heterogeneous, unstructured tables, each requiring custom logic. I also normalized fields with line breaks and poorly formatted text, improving overall data quality and consistency. For this work, I used Angular along with .NET, HTML, CSS, JavaScript, and TypeScript.",
+    "HISTORY_2025": "CNV – Institutional Website and Financial Highway",
+    "HISTORY_2025_TXT": "In 2025, I am involved in enhancing the CNV’s institutional website and its Financial Highway platform. For the latter, I apply technologies such as Vue.js, .NET, HTML, CSS, JavaScript, and TypeScript, collaborating in the development of modern and scalable solutions.",
+
+    "OBJECTIVES_LEAD": "My goal is to create maintainable software that provides real business value. I also strive to grow both professionally and academically, and I enjoy the idea of participating in new projects from scratch and building things."
+
   },
   "CONTACT_ME": {
     "CONTACT_ME": "Contact me",
