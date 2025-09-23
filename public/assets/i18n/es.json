@@ -6,14 +6,17 @@
     "INTRODUCTION": "Introducción",
     "PROFESSIONAL_HISTORY": "Mi carrera profesional",
     "OBJECTIVES": "Objetivos",
-    "LEARN_MORE": "Leer más"
+    "LEARN_MORE": "Leer más",
+    "FEEDBACK":"Comentarios",
+    "POSITIVE_FEEDBACK":"Positivos"
   },
   "CONTACT_ME": {
     "CONTACT_ME": "Contáctame",
     "NAME": "Nombre",
     "EMAIL": "Correo electrónico",
     "PHONE_NUMBER": "Celular",
-    "MESSAGE": "Mensaje"
+    "MESSAGE": "Mensaje",
+    "SUBMIT_BUTTON":"Enviar"
   },
   "HEADER": {
     "HOME":"Inicio",

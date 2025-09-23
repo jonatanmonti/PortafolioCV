@@ -61,7 +61,8 @@ export class Cv {
     { name: 'Ionic', level: 30 },
     { name: 'TypeScript', level: 70 },
     { name: 'HTML / CSS / SCSS', level: 90 },
-    { name: 'Vue.js', level: 60 }
+    { name: 'Vue.js', level: 60 },
+    { name: 'Windows Forms', level: 80 }
   ];
   skillsBackend: Skill[] = [
     { name: 'C# / .NET', level: 70 },
@@ -72,7 +73,7 @@ export class Cv {
   skillsDevops: Skill[] = [
     { name: 'Git', level: 85 },
     { name: 'Azure DevOps', level: 70 },
-    { name: 'Linux / CLI', level: 50 }
+    { name: 'Linux', level: 50 }
   ];
 
   softSkills = [
